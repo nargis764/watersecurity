@@ -5,9 +5,7 @@ min-height: 600px;
 background-size:cover;
 background-position:center center;
 background-repeat:no-repeat;
-padding:0 10%;
-
-
+padding:50px 10%;
 }
 
 .heroTitle {    
@@ -16,14 +14,18 @@ padding:0 10%;
 
 .detailsContainer {
     background-color:#f0ede3;
-    width:30%;
-    padding:0 5%;
+        width:33%; 
+    
+    /* grid-column:8/span 4; */
 }
 
 .listGroup {
     font-family: encode_sans_compressedregular, sans-serif;
-    font-size: 15px;
-    border-bottom: 1px solid #dbd5c5;     
-    padding: 14px 30px 12px;
+    font-size: 15px;    
+    border-bottom: 1px solid #dbd5c5;
+    border-left: 0;
+    border-right: 0;     
+    padding: 5px 0;
     color: #444;
+    text-transform: uppercase;
 }
