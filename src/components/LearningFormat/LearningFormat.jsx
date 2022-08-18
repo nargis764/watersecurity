@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import styles from "./LearningFormat.module.css";
 
+
 const LearningFormat = () => {
     return (
         <>
@@ -49,7 +50,7 @@ const LearningFormat = () => {
                         lineHeight: "1.42857", 
                         fontFamily: "open_sansregular,sans-serif",
                         fontSize:"17px",
-                        color: "#222" 
+                        color: "#222", 
                     }}>
                         Fully Online. Fully Asynchronous so anyone from anywhere can sign up. There will be designated office
                         hours for real-time interaction with instructors on a weekly basis.

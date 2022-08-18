@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Modal from './Modal'
+import { Link } from "react-router-dom";
 import styles from "./AboutProgram.module.css"
 
 
@@ -11,27 +12,30 @@ const AboutProgram = () => {
     return (
         <>
             {isOpenModal ? <Modal setIsOpenModal={setIsOpenModal} /> :
-                <div style={{ 
-                    display: "flex", 
-                    justifyContent: "space-between", 
-                    padding: "0 10%", 
+                <div style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    padding: "0 10%",
                     marginTop: "100px",
-                    marginBottom: "80px" }}>
+                    marginBottom: "80px"
+                }}>
 
 
                     <div style={{ width: "60%" }}>
                         <div>
-                            <h1 style={{ 
-                                textTransform: "uppercase", 
-                                color: "#4b2e83", 
-                                fontFamily: "encode_sans_compressedblack,sans-serif" }}>
+                            <h2 style={{
+                                textTransform: "uppercase",
+                                color: "#4b2e83",
+                                fontFamily: "encode_sans_compressedblack,sans-serif",
+                                fontSize:"40px"
+                            }}>
                                 About this program
-                            </h1>
+                            </h2>
 
                             <p style={{
-                                fontFamily: "open_sansregular,sans-serif", 
-                                color: "#222", 
-                                marginBottom: "16px", 
+                                fontFamily: "open_sansregular,sans-serif",
+                                color: "#222",
+                                marginBottom: "16px",
                                 fontSize: "17px",
                                 lineHeight: "1.42857"
                             }}>
@@ -76,20 +80,22 @@ const AboutProgram = () => {
                             </p>
                             <button style={{
                                 textShadow: "0 -1px 0 rgba(0,0,0,.2)",
-                                borderRadius: "0",
+                                borderRadius: "5px",
+                                border:"none",
                                 fontFamily: "encode_sans_compressedbold,sans-serif",
-                                fontWeight:"bold",
+                                fontWeight: "bold",
                                 textTransform: "uppercase",
                                 fontSize: "20px",
                                 // padding: "10px 16px",
-                                cursor:"pointer",
+                                cursor: "pointer",
                                 textAlign: "center",
-                                backgroundColor:"#4b2e83",
-                                padding:"15px 20px",
-                                marginBottom:"50px",
-                                color:"white"}} 
+                                backgroundColor: "#4b2e83",
+                                padding: "15px 20px",
+                                margin: "10px 0 50px",
+                                color: "white"
+                            }}
                                 onClick={() => setIsOpenModal(true)}>
-                                    See Requirements
+                                See Requirements
                             </button>
                         </div>
 
@@ -106,31 +112,31 @@ const AboutProgram = () => {
 
                             <ul style={{
                                 fontFamily: "open_sansregular,sans-serif",
-                                color: "#222", 
-                                display: "flex", 
-                                flexDirection: "column", 
+                                color: "#222",
+                                display: "flex",
+                                flexDirection: "column",
                                 gap: "5px",
-                                
+
                             }}>
-                                <li>
+                                <li style={{ lineHeight: "1.42857" }}>
                                     Apply basic concepts of remote sensing and data to identify and characterize social justice issues
                                     in water resources
                                 </li>
 
-                                <li>
+                                <li style={{ lineHeight: "1.42857" }}>
                                     Re-evaluate water infrastructure safety in a changing climate using modern methods
                                 </li>
 
-                                <li>
+                                <li style={{ lineHeight: "1.42857" }}>
                                     Develop an understanding of how public water system planning, design, and operation
                                     relates to the topic of water security
                                 </li>
 
-                                <li>
+                                <li style={{ lineHeight: "1.42857" }}>
                                     Understand the connections between water security and public health
                                 </li>
 
-                                <li>
+                                <li style={{ lineHeight: "1.42857" }}>
                                     Develop scientific visualization and coding skills and understand the role of geopolitics in water
                                     security.
                                 </li>
@@ -142,15 +148,18 @@ const AboutProgram = () => {
                     </div>
 
 
-                    <div style={{ 
-                        width: "30%", 
-                    textAlign: "center", 
-                    textTransform: "uppercase" }}>
-                        <div style={{ 
-                            backgroundColor: "#4b2e83", 
-                            color: "white", 
-                            padding: "20px 20px" }}>
-                            <h2>
+                    <div style={{
+                        width: "30%",
+                        textAlign: "center",
+
+                    }}>
+                        <div style={{
+                            backgroundColor: "#4b2e83",
+                            color: "white",
+                            padding: "20px 20px 30px",
+                            
+                        }}>
+                            <h2 style={{textTransform: "uppercase"}}>
                                 Program Overview
                             </h2>
                             <p>
@@ -172,30 +181,33 @@ const AboutProgram = () => {
 
                         <div style={{}}>
 
-                            <div className={styles.shape}>
+                            <div className={styles.shapeLightGray}>
                             </div>
-                            <div style={{ 
-                                backgroundColor: "#e8e8e8", 
-                                color: "white", 
-                                position: "relative", 
-                                top: "-22px", 
-                                padding: "20px 20px 30px", 
+                            <div style={{
+                                backgroundColor: "#e8e8e8",
+                                color: "white",
+                                position: "relative",
+                                top: "-22px",
+                                padding: "20px 20px 50px",
+                                textTransform: "uppercase"
+                            }}>
+                                <h3 style={{
+                                    color: "#444",
+                                    fontFamily: "open_sansbold,sans-serif",
+                                    fontSize:"16px",
+                                    textTransform: "uppercase"
                                 }}>
-                                <h3 style={{ 
-                                    color: "#444", 
-                                fontFamily: "open_sansbold,sans-serif", 
-                                textTransform: "uppercase" }}>
-                                    CEWA XXX (Fall)
+                                    CEWA XXX (Fall) {/* change the course number */}
                                 </h3>
-                                <p style={{ color: "#4b2e83" }}>
+                                <Link to="/" style={{ color: "#4b2e83", textDecoration: "none", fontSize: "12px", fontWeight:"700" }}>
                                     Water remote sensing and social justice
-                                </p>
+                                </Link>
                             </div>
                         </div>
 
                         <div style={{ marginTop: "-30px" }}>
 
-                            <div className={styles.shape}>
+                            <div className={styles.shapeLightGray}>
                             </div>
 
                             <div style={{
@@ -203,117 +215,189 @@ const AboutProgram = () => {
                                 color: "white",
                                 position: "relative",
                                 top: "-22px",
-                                padding: "20px 20px 30px"
+                                padding: "20px 20px 50px",
+                                textTransform: "uppercase"
                             }}>
 
                                 <h3 style={{
                                     color: "#444",
                                     fontFamily: "open_sansbold,sans-serif",
+                                    fontSize:"16px",
                                     textTransform: "uppercase"
                                 }}>
-                                    CEWA XXX (Fall)
+                                    CEWA XXX (Fall) {/* change the course number */}
                                 </h3>
-                                <p style={{ color: "#4b2e83" }}>
+                                <Link to="/" style={{ color: "#4b2e83", textDecoration: "none", fontSize: "12px", fontWeight:"700" }}>
                                     Water and public health
-                                </p>
+                                </Link>
                             </div>
                         </div>
 
                         <div style={{ marginTop: "-30px" }}>
 
-                            <div className={styles.shape}>
+                            <div className={styles.shapeLightGray}>
                             </div>
                             <div style={{
                                 backgroundColor: "#e8e8e8",
                                 color: "white",
                                 position: "relative",
                                 top: "-22px",
-                                padding: "20px 20px 30px"
+                                padding: "20px 20px 50px",
+                                textTransform: "uppercase"
                             }}>
 
                                 <h3 style={{
                                     color: "#444",
                                     fontFamily: "open_sansbold,sans-serif",
-                                    textTransform: "uppercase"
+                                    fontSize:"16px",
+                                    // textTransform: "uppercase"
                                 }}>
-                                    CEWA XXX (Winter)
+                                    CEWA XXX (Winter) {/* change the course number */}
                                 </h3>
-                                <p style={{ color: "#4b2e83" }}>
+                                <Link to="/" style={{ color: "#4b2e83", textDecoration: "none", fontSize: "12px", fontWeight:"700" }}>
                                     Water infrastructure safety
-                                </p>
+                                </Link>
                             </div>
                         </div>
 
                         <div style={{ marginTop: "-30px" }}>
 
-                            <div className={styles.shape}>
+                            <div className={styles.shapeLightGray}>
                             </div>
+
                             <div style={{
                                 backgroundColor: "#e8e8e8",
                                 color: "white",
                                 position: "relative",
                                 top: "-22px",
-                                padding: "20px 20px 30px"
+                                padding: "20px 20px 50px",
+                                textTransform: "uppercase"
                             }}>
 
                                 <h3 style={{
                                     color: "#444",
                                     fontFamily: "open_sansbold,sans-serif",
-                                    textTransform: "uppercase"
+fontSize:"16px",
                                 }}>
-                                    CEWA XXX (Winter)
+                                    CEWA XXX (Winter) {/* change the course number */}
                                 </h3>
-                                <p style={{ color: "#4b2e83" }}>
+                                <Link style={{
+                                    color: "#4b2e83",
+                                    textDecoration: "none",
+                                    fontSize: "12px",
+                                    fontWeight:"700"
+                                }} to="/">
                                     Introduction to scientific visualization and coding
-                                </p>
+                                </Link>
                             </div>
                         </div>
 
                         <div style={{ marginTop: "-30px" }}>
 
-                            <div className={styles.shape}>
+                            <div className={styles.shapeLightGray}>
                             </div>
                             <div style={{
                                 backgroundColor: "#e8e8e8",
                                 color: "white",
                                 position: "relative",
                                 top: "-22px",
-                                padding: "20px 20px 30px"
+                                padding: "20px 20px 50px",
+                                textTransform: "uppercase"
                             }}>
                                 <h3 style={{
-                                    color: "#444", fontFamily: "open_sansbold,sans-serif",
-                                    textTransform: "uppercase"
+                                    color: "#444",
+                                    fontFamily: "open_sansbold,sans-serif",
+                                    fontSize:"16px",
                                 }}>
-                                    CEWA XXX (Spring)
+                                    CEWA XXX (Spring) {/* change the course number */}
                                 </h3>
-                                <p style={{ color: "#4b2e83" }}>
+                                <Link to="/" style={{ color: "#4b2e83", textDecoration: "none", fontSize: "12px", fontWeight:"700" }}>
                                     Water security in public water systems
-                                </p>
+                                </Link>
                             </div>
                         </div>
 
                         <div style={{ marginTop: "-30px" }}>
 
-                            <div className={styles.shape}>
+                            <div className={styles.shapeLightGray}>
                             </div>
 
-                            <div style={{ 
-                                backgroundColor: "#e8e8e8", 
-                                color: "white", 
-                                position: "relative", 
-                                top: "-22px", 
-                                padding: "20px 20px 30px" }}>
-                                <h3 style={{ 
-                                    color: "#444", 
-                                    fontFamily: "open_sansbold,sans-serif", 
-                                    textTransform: "uppercase" }}>
-                                    CEWA XXX (Spring)
+                            <div style={{
+                                backgroundColor: "#e8e8e8",
+                                color: "white",
+                                position: "relative",
+                                top: "-22px",
+                                padding: "20px 20px 50px",
+                                textTransform: "uppercase"
+                            }}>
+                                <h3 style={{
+                                    color: "#444",
+                                    fontFamily: "open_sansbold,sans-serif",
+                                    fontSize:"16px",
+                                }}>
+                                    CEWA XXX (Spring) {/* change the course number */}
                                 </h3>
-                                <p style={{ color: "#4b2e83" }}>
+                                <Link to="/" style={{ color: "#4b2e83", textDecoration: "none", fontSize: "12px",  fontWeight:"700" }}>
                                     Water security and geopolitics
-                                </p>
+                                </Link>
                             </div>
                         </div>
+
+
+                        <div style={{ marginTop: "-30px" }}>
+
+                            <div className={styles.shapeGray}>
+                            </div>
+
+                            <div style={{
+                                backgroundColor: "#d9d9d9",
+                                position: "relative",
+                                top: "-22px",
+                                padding: "30px 20px 54px",
+                                display:"flex",
+                                flexDirection:"column",
+                                justifyContent:"space-between",
+                                gap:"15px"
+                            }}>
+
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_454076.png" alt="certificate" width="62" height="54"/>
+                                </div>
+
+                                <div>
+
+                                    <Link to="/" style={{
+                                        textDecoration: "none",
+                                        fontFamily: "encode_sans_compressedblack,sans-serif",
+                                        textTransform: "uppercase",
+                                        fontSize: "24px",
+                                        lineHeight: "1.1",
+                                        cursor: "pointer",
+                                        color: "#444",
+                                        fontWeight:"bold"
+                                    }}>
+                                        Certificate in water security
+                                    </Link>
+                                </div>
+                                <div>
+                                    <p>Approved by the <Link to="/" style={{
+                                        textDecoration: "none",
+                                        fontFamily: "open_sansbold,sans-serif",
+                                        fontSize: "13px;",
+                                        lineHeight: "1.1",
+                                        cursor: "pointer",
+                                        color: "#4b2e83"
+                                    }}>UW Department of Civil and Environmental Engineering</Link></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div style={{ marginTop: "-20px" }}>
+
+                            <div className={styles.shapeWhite}></div>
+                        </div>
+
 
 
 
