@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from "./MainComponent.module.css"
 import { HashLink as Link } from "react-router-hash-link"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot, faCalendarDays, faClock, faCircleDollarToSlot, faDollarSign, faComputer, faGreaterThan } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -40,7 +42,11 @@ const MainComponent = () => {
                                     justifyContent: "space-between",
                                     padding: "0 30px",
                                 }}>
-                                    <p>Location:</p>
+                                    <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+                                        <FontAwesomeIcon icon={faLocationDot} />                                        
+                                        <p style={{ marginLeft:"5px"}}>Location:</p>
+                                    </div>
+                                    
                                     <p style={{ fontFamily: "encode_sans_compressedbold,sans-serif" }}>Online</p>
                                 </div>
                             </li>
@@ -51,7 +57,11 @@ const MainComponent = () => {
                                     justifyContent: "space-between", 
                                     padding: "0 30px" 
                                 }}>
-                                    <p>Duration:</p>
+                                    <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+                                        <FontAwesomeIcon icon={ faCalendarDays } />
+                                        
+                                        <p style={{ marginLeft:"5px"}}>Duration:</p>
+                                    </div>
                                     <p style={{ 
                                         fontFamily: "encode_sans_compressedbold,sans-serif" }}>
                                             9 Months
@@ -64,7 +74,11 @@ const MainComponent = () => {
                                     display: "flex", 
                                     justifyContent: "space-between", 
                                     padding: "0 30px" }}>
-                                    <p>Times:</p>
+                                    <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+                                        <FontAwesomeIcon icon={ faClock } />
+                                        
+                                        <p style={{ marginLeft:"5px"}}>Times:</p>
+                                    </div>
                                     <p style={{ 
                                         fontFamily: "encode_sans_compressedbold,sans-serif" }}>
                                             Days
@@ -74,7 +88,11 @@ const MainComponent = () => {
 
                             <li className={styles.listGroup}>
                                 <div style={{ display: "flex", justifyContent: "space-between", padding: "0 30px" }}>
-                                    <p>Cost:</p>
+                                    <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+                                        <FontAwesomeIcon icon={ faDollarSign } />
+                                        
+                                        <p style={{ marginLeft:"5px"}}>Cost:</p>
+                                    </div>
                                     <p style={{ fontFamily: "encode_sans_compressedbold,sans-serif" }}>$6,000</p>
                                 </div>
                             </li>
@@ -95,37 +113,12 @@ const MainComponent = () => {
                             </p>
                         </div>
 
-                        <div style={{
-                            textShadow: "0 -1px 0 rgba(0,0,0,.2)",
-                            borderRadius: "0",
-                            fontFamily: "encode_sans_compressedbold,sans-serif",
-                            fontWeight: "bold",
-                            textTransform: "uppercase",
-                            fontSize: "20px",                            
-                            cursor: "pointer",
-                            textAlign: "center",
-                            backgroundColor: "#4b2e83",
-                            padding: "15px 20px",                            
-                            color: "white",
-                            margin: "0 30px 20px"
-                        }}>
-                            <Link to="#sessions" style={{ color: "white", textDecoration: "none" }}>Get Details</Link>
+                        <div className={styles.programDetails}>
+                            <Link to="#sessions" style={{ color: "white", textDecoration: "none" }}>Get Details <FontAwesomeIcon icon={ faGreaterThan } /></Link>
                         </div>
 
-                        <button style={{
-                            textTransform: "uppercase",
-                            fontFamily: "open_sansbold,sans-serif!important",
-                            fontSize: "14px",
-                            cursor: "pointer",
-                            background: "transparent",
-                            border: "1px solid #4b2e83",
-                            padding: "15px 20px",
-                            textAlign: "center",
-                            // fontWeight:"bold",
-                            color: "#4b2e83",
-                            margin: "0 30px 20px"
-                        }}>
-                            talk to an enrollment coach
+                        <button className={styles.button}>
+                            <FontAwesomeIcon icon={ faComputer } /> talk to an enrollment coach
                         </button>
                     </div>
 

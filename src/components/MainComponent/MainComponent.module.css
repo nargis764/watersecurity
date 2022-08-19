@@ -1,30 +1,63 @@
-.heroImg {    
-/* background-image: url("https://pce.azureedge.net/getmedia/e363958f-feea-4f8a-a343-a76e8ebdec4e/earthquake-eng-cert-hero-2000x600-2.jpg");  */
-background-image: url("/images/whitesands.jpg");
-min-height: 600px;
-background-size:cover;
-background-position:center center;
-background-repeat:no-repeat;
-padding:50px 10%;
+.heroImg {
+    /* background-image: url("https://pce.azureedge.net/getmedia/e363958f-feea-4f8a-a343-a76e8ebdec4e/earthquake-eng-cert-hero-2000x600-2.jpg");  */
+    background-image: url("/images/whitesands.jpg");
+    min-height: 600px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 50px 10%;
 }
 
-.heroTitle {    
-
+.heroTitle {
+    color: white;
+    text-transform: uppercase;
+    font-size: 58px;
+    line-height: 60px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    transition-delay: 0.4s;
 }
 
 .detailsContainer {
-    background-color:#f0ede3;
-        width:33%; 
-    
+    background-color: #f0ede3;
+    width: 33%;
+
     /* grid-column:8/span 4; */
+}
+
+.programDetails {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    border-radius: 0;
+    font-family: encode_sans_compressedbold, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #4b2e83;
+    padding: 15px 20px;
+    color: white;
+    margin: 0 30px 20px;
+}
+
+.button {
+    text-transform: uppercase;
+    font-family: open_sansbold, sans-serif !important;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #4b2e83;
+    padding: 15px 20px;
+    text-align: center;
+    color: #4b2e83;
+    margin: 0 30px 20px;
 }
 
 .listGroup {
     font-family: encode_sans_compressedregular, sans-serif;
-    font-size: 15px;    
+    font-size: 15px;
     border-bottom: 1px solid #dbd5c5;
     border-left: 0;
-    border-right: 0;     
+    border-right: 0;
     padding: 5px 0;
     color: #444;
     text-transform: uppercase;

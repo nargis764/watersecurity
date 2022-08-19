@@ -1,11 +1,94 @@
+.modal {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+
+.aboutProgramTitle {
+    text-transform: uppercase;
+    color: #4b2e83;
+    font-family: encode_sans_compressedblack, sans-serif;
+    font-size: 40px;
+}
+
+.openModalButton {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    border: none;
+    font-family: encode_sans_compressedbold, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #4b2e83;
+    padding: 15px 20px;
+    margin: 10px 0 50px;
+    color: white;
+}
+
+
+.courseContainer {
+    background-color: #e8e8e8;
+    color: white;
+    position: relative;
+    top: -22px;
+    padding: 20px 20px 50px;
+    text-transform: uppercase;
+
+}
+
+
+.courseNumber {
+    color: #444;
+    font-family: open_sansbold, sans-serif;
+    font-size: 16px;
+    text-transform: "uppercase";
+}
+
+
+.courseTitle {
+    color: #4b2e83;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.certificateTitle {
+    text-decoration: none;
+    font-family: encode_sans_compressedblack, sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.1;
+    cursor: pointer;
+    color: #444;
+    font-weight: bold;
+}
+
+
+.departmentTitle {
+    text-decoration: none;
+    font-family: open_sansbold, sans-serif;
+    font-size: 13px;
+    ;
+    line-height: 1.1;
+    cursor: pointer;
+    color: #4b2e83;
+}
+
+
 .shapeLightGray {
     background: url("https://www.pce.uw.edu/assets/images/svg/light-gray-chevron.svg") no-repeat center bottom;
     display: "block";
     height: 24px;
     width: 100%;
-    position:relative; 
-    top:-20px;
-    
+    position: relative;
+    top: -20px;
+
 }
 
 .shapeGray {
@@ -13,18 +96,17 @@
     display: "block";
     height: 24px;
     width: 100%;
-    position:relative; 
-    top:-20px;
-    
+    position: relative;
+    top: -20px;
+
 }
 
 .shapeWhite {
     background: url("https://www.pce.uw.edu/assets/images/svg/white-chevron.svg") no-repeat center bottom;
     display: "block";
     height: 80px;
-    top:-80px;
+    top: -80px;
     width: 100%;
-    position:relative; 
-    
-}
+    position: relative;
 
+}

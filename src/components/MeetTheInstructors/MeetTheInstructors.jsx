@@ -5,6 +5,7 @@ import { Navigation, EffectFade } from "swiper"
 import "swiper/css/navigation"
 import "swiper/css/effect-fade"
 import axios from "axios";
+import styles from "./MeetTheInstructors.module.css"
 
 
 const MeetTheInstructors = () => {
@@ -45,26 +46,13 @@ const MeetTheInstructors = () => {
 
                         {
                             clickedOnInst ? (<>
-                                <img style={{
-                                    height: "450px",
-                                    width: "450px",
-                                    borderRadius: "50%",
-                                    border: "3px #fff solid",
-                                    boxShadow: "0 0 4px rgb(0 0 0 / 40%)",
-                                    color: "transparent",
-                                    overflow: "hidden",
-                                }}
-                                    src={instructorDetails.image} />
+                                <img 
+                                className={styles.instrcutorImage}
+                                src={instructorDetails.image} />
                             </>) : (<>
-                                <img style={{
-                                    height: "450px",
-                                    width: "450px",
-                                    borderRadius: "50%",
-                                    border: "3px #fff solid",
-                                    boxShadow: "0 0 4px rgb(0 0 0 / 40%)",
-                                    color: "transparent",
-                                    overflow: "hidden"
-                                }} src={data[0]?.image} />
+                                <img 
+                                className={styles.instrcutorImage} 
+                                src={data[0]?.image} />
                             </>)
 
                         }
@@ -127,7 +115,8 @@ const MeetTheInstructors = () => {
                             </p>
                             <p style={{
                                 fontFamily: "open_sansregular,sans-serif",
-                                fontSize: "16px", lineHeight: "1.42857", color: "#454545",
+                                fontSize: "16px", 
+                                color: "#454545",
                                 lineHeight: "1.42857"
                             }}>
                                 {data[0]?.bio}

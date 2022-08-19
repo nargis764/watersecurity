@@ -2,35 +2,40 @@ import React, { useState } from 'react'
 import Modal from './Modal'
 import { Link } from "react-router-dom";
 import styles from "./AboutProgram.module.css"
+import { ExternalLink } from 'react-external-link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGreaterThan } from '@fortawesome/free-solid-svg-icons'
+
 
 
 
 const AboutProgram = () => {
 
     const [isOpenModal, setIsOpenModal] = useState(false);
+    
 
     return (
         <>
             {isOpenModal ? <Modal setIsOpenModal={setIsOpenModal} /> :
-                <div style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    padding: "0 10%",
-                    marginTop: "100px",
-                    marginBottom: "80px"
-                }}>
+                <div className={styles.modal}>
 
 
                     <div style={{ width: "60%" }}>
                         <div>
-                            <h2 style={{
-                                textTransform: "uppercase",
-                                color: "#4b2e83",
-                                fontFamily: "encode_sans_compressedblack,sans-serif",
-                                fontSize:"40px"
-                            }}>
+                            <h2 className={styles.aboutProgramTitle}>
                                 About this program
                             </h2>
+                            <div style={{
+                            content: '',
+                            // display: "block",
+                            width: "47%",
+                            height: "8px",
+                            overflow: "hidden",
+                            background: "url(https://www.pce.uw.edu/assets/images/svg/gold-bar.svg) no-repeat right top",
+                            backgroundSize: "766px 8px",
+                            marginTop: "-15px",
+                            marginBottom:"30px"
+                        }}></div>
 
                             <p style={{
                                 fontFamily: "open_sansregular,sans-serif",
@@ -78,24 +83,10 @@ const AboutProgram = () => {
                                 atmospheric science, physics, and biology, liberal arts such as law, policy, economics, urban/landscape
                                 planning.
                             </p>
-                            <button style={{
-                                textShadow: "0 -1px 0 rgba(0,0,0,.2)",
-                                borderRadius: "5px",
-                                border:"none",
-                                fontFamily: "encode_sans_compressedbold,sans-serif",
-                                fontWeight: "bold",
-                                textTransform: "uppercase",
-                                fontSize: "20px",
-                                // padding: "10px 16px",
-                                cursor: "pointer",
-                                textAlign: "center",
-                                backgroundColor: "#4b2e83",
-                                padding: "15px 20px",
-                                margin: "10px 0 50px",
-                                color: "white"
-                            }}
+                            <button className={styles.openModalButton}
                                 onClick={() => setIsOpenModal(true)}>
-                                See Requirements
+                                <span style={{ marginRight:"5px" }}>See Requirements</span>
+                                <FontAwesomeIcon icon={ faGreaterThan } />
                             </button>
                         </div>
 
@@ -183,23 +174,11 @@ const AboutProgram = () => {
 
                             <div className={styles.shapeLightGray}>
                             </div>
-                            <div style={{
-                                backgroundColor: "#e8e8e8",
-                                color: "white",
-                                position: "relative",
-                                top: "-22px",
-                                padding: "20px 20px 50px",
-                                textTransform: "uppercase"
-                            }}>
-                                <h3 style={{
-                                    color: "#444",
-                                    fontFamily: "open_sansbold,sans-serif",
-                                    fontSize:"16px",
-                                    textTransform: "uppercase"
-                                }}>
+                            <div className={styles.courseContainer}>
+                                <h3 className={styles.courseNumber}>
                                     CEWA XXX (Fall) {/* change the course number */}
                                 </h3>
-                                <Link to="/" style={{ color: "#4b2e83", textDecoration: "none", fontSize: "12px", fontWeight:"700" }}>
+                                <Link to="/" className={styles.courseTitle}>
                                     Water remote sensing and social justice
                                 </Link>
                             </div>
@@ -210,24 +189,12 @@ const AboutProgram = () => {
                             <div className={styles.shapeLightGray}>
                             </div>
 
-                            <div style={{
-                                backgroundColor: "#e8e8e8",
-                                color: "white",
-                                position: "relative",
-                                top: "-22px",
-                                padding: "20px 20px 50px",
-                                textTransform: "uppercase"
-                            }}>
+                            <div className={styles.courseContainer}>
 
-                                <h3 style={{
-                                    color: "#444",
-                                    fontFamily: "open_sansbold,sans-serif",
-                                    fontSize:"16px",
-                                    textTransform: "uppercase"
-                                }}>
+                                <h3 className={styles.courseNumber}>
                                     CEWA XXX (Fall) {/* change the course number */}
                                 </h3>
-                                <Link to="/" style={{ color: "#4b2e83", textDecoration: "none", fontSize: "12px", fontWeight:"700" }}>
+                                <Link to="/" className={styles.courseTitle}>
                                     Water and public health
                                 </Link>
                             </div>
@@ -237,24 +204,12 @@ const AboutProgram = () => {
 
                             <div className={styles.shapeLightGray}>
                             </div>
-                            <div style={{
-                                backgroundColor: "#e8e8e8",
-                                color: "white",
-                                position: "relative",
-                                top: "-22px",
-                                padding: "20px 20px 50px",
-                                textTransform: "uppercase"
-                            }}>
+                            <div className={styles.courseContainer}>
 
-                                <h3 style={{
-                                    color: "#444",
-                                    fontFamily: "open_sansbold,sans-serif",
-                                    fontSize:"16px",
-                                    // textTransform: "uppercase"
-                                }}>
+                                <h3 className={styles.courseNumber}>
                                     CEWA XXX (Winter) {/* change the course number */}
                                 </h3>
-                                <Link to="/" style={{ color: "#4b2e83", textDecoration: "none", fontSize: "12px", fontWeight:"700" }}>
+                                <Link to="/" className={styles.courseTitle}>
                                     Water infrastructure safety
                                 </Link>
                             </div>
@@ -265,28 +220,12 @@ const AboutProgram = () => {
                             <div className={styles.shapeLightGray}>
                             </div>
 
-                            <div style={{
-                                backgroundColor: "#e8e8e8",
-                                color: "white",
-                                position: "relative",
-                                top: "-22px",
-                                padding: "20px 20px 50px",
-                                textTransform: "uppercase"
-                            }}>
+                            <div className={styles.courseContainer}>
 
-                                <h3 style={{
-                                    color: "#444",
-                                    fontFamily: "open_sansbold,sans-serif",
-fontSize:"16px",
-                                }}>
+                                <h3 className={styles.courseNumber}>
                                     CEWA XXX (Winter) {/* change the course number */}
                                 </h3>
-                                <Link style={{
-                                    color: "#4b2e83",
-                                    textDecoration: "none",
-                                    fontSize: "12px",
-                                    fontWeight:"700"
-                                }} to="/">
+                                <Link className={styles.courseTitle} to="/">
                                     Introduction to scientific visualization and coding
                                 </Link>
                             </div>
@@ -296,22 +235,11 @@ fontSize:"16px",
 
                             <div className={styles.shapeLightGray}>
                             </div>
-                            <div style={{
-                                backgroundColor: "#e8e8e8",
-                                color: "white",
-                                position: "relative",
-                                top: "-22px",
-                                padding: "20px 20px 50px",
-                                textTransform: "uppercase"
-                            }}>
-                                <h3 style={{
-                                    color: "#444",
-                                    fontFamily: "open_sansbold,sans-serif",
-                                    fontSize:"16px",
-                                }}>
+                            <div className={styles.courseContainer}>
+                                <h3 className={styles.courseNumber}>
                                     CEWA XXX (Spring) {/* change the course number */}
                                 </h3>
-                                <Link to="/" style={{ color: "#4b2e83", textDecoration: "none", fontSize: "12px", fontWeight:"700" }}>
+                                <Link to="/" className={styles.courseTitle}>
                                     Water security in public water systems
                                 </Link>
                             </div>
@@ -322,22 +250,11 @@ fontSize:"16px",
                             <div className={styles.shapeLightGray}>
                             </div>
 
-                            <div style={{
-                                backgroundColor: "#e8e8e8",
-                                color: "white",
-                                position: "relative",
-                                top: "-22px",
-                                padding: "20px 20px 50px",
-                                textTransform: "uppercase"
-                            }}>
-                                <h3 style={{
-                                    color: "#444",
-                                    fontFamily: "open_sansbold,sans-serif",
-                                    fontSize:"16px",
-                                }}>
+                            <div className={styles.courseContainer}>
+                                <h3 className={styles.courseNumber}>
                                     CEWA XXX (Spring) {/* change the course number */}
                                 </h3>
-                                <Link to="/" style={{ color: "#4b2e83", textDecoration: "none", fontSize: "12px",  fontWeight:"700" }}>
+                                <Link to="/" className={styles.courseTitle}>
                                     Water security and geopolitics
                                 </Link>
                             </div>
@@ -366,28 +283,16 @@ fontSize:"16px",
 
                                 <div>
 
-                                    <Link to="/" style={{
-                                        textDecoration: "none",
-                                        fontFamily: "encode_sans_compressedblack,sans-serif",
-                                        textTransform: "uppercase",
-                                        fontSize: "24px",
-                                        lineHeight: "1.1",
-                                        cursor: "pointer",
-                                        color: "#444",
-                                        fontWeight:"bold"
-                                    }}>
+                                    <Link to="/" className={styles.certificateTitle}>
                                         Certificate in water security
                                     </Link>
                                 </div>
                                 <div>
-                                    <p>Approved by the <Link to="/" style={{
-                                        textDecoration: "none",
-                                        fontFamily: "open_sansbold,sans-serif",
-                                        fontSize: "13px;",
-                                        lineHeight: "1.1",
-                                        cursor: "pointer",
-                                        color: "#4b2e83"
-                                    }}>UW Department of Civil and Environmental Engineering</Link></p>
+                                    <p>Approved by the 
+                                        <ExternalLink href="https://www.ce.washington.edu/" 
+                                        className={styles.departmentTitle}>
+                                        UW Department of Civil and Environmental Engineering
+                                        </ExternalLink></p>                                        
                                 </div>
                             </div>
 
