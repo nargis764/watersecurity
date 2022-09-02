@@ -11,7 +11,7 @@
     text-transform: uppercase;
     color: #4b2e83;
     font-family: encode_sans_compressedblack, sans-serif;
-    font-size: 40px;
+    font-size: 40px;    
 }
 
 .openModalButton {
@@ -73,8 +73,9 @@
 .departmentTitle {
     text-decoration: none;
     font-family: open_sansbold, sans-serif;
-    font-size: 13px;
-    ;
+    font-size: 14px;
+    font-weight:semibold;
+    margin-left:4px;
     line-height: 1.1;
     cursor: pointer;
     color: #4b2e83;

@@ -1,24 +1,26 @@
-import './App.css';
+import './App.css'; 
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MainComponent from './components/MainComponent';
-import AboutProgram from './components/AboutProgram';
-import ParallaxSection from './components/ParallaxSection';
-import LearningFormat from "./components/LearningFormat";
-import ProgramSessions from './components/ProgramSessions';
-import MeetTheInstructors from './components/MeetTheInstructors';
+import Home from "./components/Home"
+import GetRequirements from "./components/GetRequirements";
+import CourseDetails from './components/AboutProgram/CourseDetails';
+import MyContext from "./context/MyContext";
 
 
 const App = () => {
+
+  const [courseData, setCourseData] = useState([]);
+
   return (
     <BrowserRouter>
-    <div className="App">
-      <MainComponent/>      
-      <AboutProgram/> 
-      <ParallaxSection/>
-      <LearningFormat/>
-      <ProgramSessions/> 
-      <MeetTheInstructors/>               
-    </div>
+      <MyContext.Provider value={{ courseData, setCourseData }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/requirements" element={<GetRequirements />} />
+          <Route path="/course/:id" element={<CourseDetails />} />
+        </Routes>
+      </MyContext.Provider>
+
     </BrowserRouter>
   );
 }

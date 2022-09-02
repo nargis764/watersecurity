@@ -54,7 +54,7 @@ const LearningFormat = () => {
                     }}>
                         Fully Online. Fully Asynchronous so anyone from anywhere can sign up. There will be designated office
                         hours for real-time interaction with instructors on a weekly basis.
-                        <Link to="/"> Learn More ..</Link>
+                        {/* <Link to="/"> Learn More ..</Link> */}
                     </p>
                 </div>    
 
@@ -63,8 +63,8 @@ const LearningFormat = () => {
 
         </div>
 
-        <div className={styles.shape}>
-            </div>
+        {/* <div className={styles.shape}>
+            </div> */}
         </>
         
     )
