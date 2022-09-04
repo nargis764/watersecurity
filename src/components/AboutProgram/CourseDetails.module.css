@@ -1,0 +1,83 @@
+.aboutCourseTitle {
+    text-transform: uppercase;
+    color: #4b2e83;
+    font-family: encode_sans_compressedblack, sans-serif;
+    font-size: 40px;    
+}
+
+.heroImg {
+    /* background-image: url("https://pce.azureedge.net/getmedia/e363958f-feea-4f8a-a343-a76e8ebdec4e/earthquake-eng-cert-hero-2000x600-2.jpg");  */
+    background-image: url("/images/whitesands.jpg");
+    min-height: 400px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 50px 10%;
+}
+
+.courseContainer {
+    background-color: #e8e8e8;
+    color: white;
+    position: relative;
+    top: -22px;
+    padding: 20px 20px 50px;
+    text-transform: uppercase;
+
+}
+
+
+.courseNumber {
+    color: #444;
+    font-family: open_sansbold, sans-serif;
+    font-size: 16px;
+    text-transform: "uppercase";
+}
+
+.shapeLightGray {
+    background: url("https://www.pce.uw.edu/assets/images/svg/light-gray-chevron.svg") no-repeat center bottom;
+    display: "block";
+    height: 24px;
+    width: 100%;
+    position: relative;
+    top: -20px;
+
+}
+
+.requirements {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.courseTitle {
+    color: #4b2e83;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.certificateTitle {
+    text-decoration: none;
+    font-family: encode_sans_compressedblack, sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.1;
+    cursor: pointer;
+    color: #444;
+    font-weight: bold;
+}
+
+
+.departmentTitle {
+    text-decoration: none;
+    font-family: open_sansbold, sans-serif;
+    font-size: 14px;
+    font-weight:semibold;
+    margin-left:4px;
+    line-height: 1.1;
+    cursor: pointer;
+    color: #4b2e83;
+}

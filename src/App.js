@@ -9,7 +9,9 @@ import MyContext from "./context/MyContext";
 
 const App = () => {
 
-  const [courseData, setCourseData] = useState([]);
+  const [courseData, setCourseData] = useState(() => {
+    const courselist = localStorage.getItem('data')
+    return courselist ? JSON.parse(courselist) : []});
 
   return (
     <BrowserRouter>

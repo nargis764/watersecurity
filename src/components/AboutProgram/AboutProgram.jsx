@@ -1,7 +1,5 @@
 import React, { useEffect, useContext } from 'react';
 import axios from "axios";
-import CourseDetails from "./CourseDetails";
-import Modal from './Modal'
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./AboutProgram.module.css"
 import { ExternalLink } from 'react-external-link';
@@ -21,6 +19,7 @@ const AboutProgram = ({ courseData, setCourseData }) => {
             .then((res) => {
                 console.log(res.data);
                 context.setCourseData(res.data);
+                context.courseData && localStorage.setItem("data", JSON.stringify(context.courseData));
             })
             .catch((err) => console.log(err))
     }, [])
