@@ -12,9 +12,7 @@ const MainComponent = () => {
     return (
         <>
             <div className={styles.heroImg}>
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    {/* <div style={{ display: "grid", gridTemplateColumns:"repeat(12,1fr)", gridColumnGap:"4rem" }}>
-                    <div style={{gridColumn:"1/span 7"}}> */}
+                <div style={{ display: "flex", justifyContent: "space-between" }}>                    
                     <div style={{ width: "60%" }}>
                         <h1 style={{
                             color: "white",
