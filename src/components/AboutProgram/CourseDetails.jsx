@@ -53,8 +53,8 @@ const CourseDetails = ({ courseData }) => {
         </div>
 
         {/* <div style={{padding:"10px 10%"}}> */}
-        <div className={styles.requirements}>
-            <div style={{ width: "60%" }}>
+        <div className = { styles.requirementsContainer }>
+            <div className = { styles.requirements }>
 
             <h2 className={styles.aboutCourseTitle}>
                             About this Course
@@ -95,11 +95,7 @@ const CourseDetails = ({ courseData }) => {
             </div>
 
 
-            <div style={{
-                    width: "30%",
-                    textAlign: "center",
-
-                }}>
+            <div className = {styles.programOverviewContainer}>
                     <div style={{
                         backgroundColor: "#4b2e83",
                         color: "white",

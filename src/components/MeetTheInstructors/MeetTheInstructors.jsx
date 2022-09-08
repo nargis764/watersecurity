@@ -32,15 +32,9 @@ const MeetTheInstructors = () => {
 
     return (
         <>
-            <div style={{
-                backgroundColor: "#f0ede3",
-                padding: "40px 10% 80px",
-                display: "flex",
-                justifyContent: "flex-start",
-                // alignItems: "center"
-            }}>
+            <div className={styles.instructorMain}>
 
-                <div style={{ width: "45%" }}>
+                <div className={ styles.instructorImageContainer}>
 
                     <div style={{}}>
 
@@ -60,7 +54,7 @@ const MeetTheInstructors = () => {
                     </div>
 
                 </div>
-                <div style={{ width: "55%" }}>
+                <div className={styles.instructorDetailsContainer}>
                     <h2 style={{
                         fontFamily: "encode_sans_compressedblack,sans-serif",
                         color: "#4b2e83",
@@ -86,7 +80,8 @@ const MeetTheInstructors = () => {
                             </p>
                             <p style={{
                                 fontFamily: "open_sansregular,sans-serif",
-                                fontSize: "16px", lineHeight: "1.42857", color: "#222", fontWeight: "700"
+                                fontSize: "16px", 
+                                lineHeight: "1.42857", color: "#222", fontWeight: "700"
                             }}>
                                 {instructorDetails.title}
                             </p>

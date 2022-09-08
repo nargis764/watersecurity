@@ -1,3 +1,14 @@
+.instructorMain {
+    background-color: #f0ede3;
+    padding: 40px 10% 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.instructorImageContainer {
+    width: 45%;
+}
+
 .instrcutorImage {
     height: 450px;
     width: 450px;
@@ -6,4 +17,115 @@
     box-shadow: 0 0 4px rgb(0 0 0 / 40%);
     color: transparent;
     overflow: hidden;
+}
+
+/* .instructorDetailsContainer {
+    width: 55%;
+} */
+
+
+@media only screen and (max-width: 800px) {
+    .instructorMain {       
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+    }
+
+    .instructorImageContainer {
+        width: 90%;
+        text-align: center;
+    }
+
+    .instrcutorImage {
+        height: 300px;
+        width: 300px;
+    }
+
+    .instructorDetailsContainer {
+        width: 90%;
+    }
+
+}
+
+
+@media only screen and (min-width: 800px) {
+    .instructorMain {
+        background-color: #f0ede3;
+        padding: 40px 5% 20px;
+        display: flex;
+        justify-content: space-between;
+        ;
+    }
+
+    .instructorImageContainer {
+        width: 45%;
+        /* text-align:center; */
+    }
+
+    .instrcutorImage {
+        height: 300px;
+        width: 300px;
+    }
+
+    .instructorDetailsContainer {
+        width: 55%;
+    }
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .instructorMain {
+        background-color: #f0ede3;
+        padding: 40px 10% 20px;
+        display: flex;
+        justify-content: space-between;
+        ;
+    }
+
+    .instructorImageContainer {
+        width: 40%;
+        text-align: center;
+    }
+
+    .instrcutorImage {
+        height: 350px;
+        width: 350px;
+    }
+
+    .instructorDetailsContainer {
+        width: 50%;
+    }
+
+}
+
+@media only screen and (min-width: 1300px) {
+    .instructorMain {
+        background-color: #f0ede3;
+        padding: 40px 8% 20px;
+        display: flex;
+        justify-content: space-between;
+        ;
+    }
+
+    .instructorImageContainer {
+        width: 45%;
+        text-align: center;
+    }
+
+    .instrcutorImage {
+        max-height: 450px;
+        max-width: 450px;
+        border-radius: 50%;
+        border: 3px #fff solid;
+        box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+        color: transparent;
+        overflow: hidden;
+
+    }
+
+    .instructorDetailsContainer {
+        width: 55%;
+    }
+
 }

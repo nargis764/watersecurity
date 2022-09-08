@@ -12,16 +12,9 @@ const MainComponent = () => {
     return (
         <>
             <div className={styles.heroImg}>
-                <div style={{ display: "flex", justifyContent: "space-between" }}>                    
-                    <div style={{ width: "60%" }}>
-                        <h1 style={{
-                            color: "white",
-                            textTransform: "uppercase",
-                            fontSize: "58px",
-                            lineHeight: "60px",
-                            textShadow: "0 0 5px rgba(0,0,0,.4)",
-                            transitionDelay: "0.4s"
-                        }}>
+                <div className={ styles.mainContainer }>                    
+                    <div className={styles.titleContainer}>
+                        <h1 className={styles.heroTitle}>
                             Proposed certificate in water security
                         </h1>
                     </div>

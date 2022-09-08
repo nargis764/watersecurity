@@ -1,4 +1,4 @@
-.modal {
+.aboutProgram {
     display: flex;
     justify-content: space-between;
     padding: 0 10%;
@@ -6,15 +6,30 @@
     margin-bottom: 80px;
 }
 
+.aboutProgramContainer {
+    width: 60%;
+}
+
 
 .aboutProgramTitle {
     text-transform: uppercase;
     color: #4b2e83;
     font-family: encode_sans_compressedblack, sans-serif;
-    font-size: 40px;    
+    font-size: 40px;
 }
 
-.openModalButton {
+.goldBar {
+    content: '';
+    width: 47%;
+    height: 8px;
+    overflow: hidden;
+    background: url("https://www.pce.uw.edu/assets/images/svg/gold-bar.svg") no-repeat right top;
+    background-size: 766px 8px;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+.requirementsButton {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
     border-radius: 5px;
     border: none;
@@ -30,6 +45,10 @@
     color: white;
 }
 
+.programOverviewContainer {
+    width: 30%;
+    text-align: center;
+}
 
 .courseContainer {
     background-color: #e8e8e8;
@@ -74,8 +93,8 @@
     text-decoration: none;
     font-family: open_sansbold, sans-serif;
     font-size: 14px;
-    font-weight:semibold;
-    margin-left:4px;
+    font-weight: semibold;
+    margin-left: 4px;
     line-height: 1.1;
     cursor: pointer;
     color: #4b2e83;
@@ -109,5 +128,72 @@
     top: -80px;
     width: 100%;
     position: relative;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .aboutProgram {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 10%;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    }
+
+
+    .aboutProgramContainer {
+        width: 90%;
+    }
+
+    .programOverviewContainer {
+        width: fit-content;
+        text-align: center;
+    }
+
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+    .aboutProgram {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 10%;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    }
+
+
+    .aboutProgramContainer {
+        width: 90%;
+    }
+
+    .programOverviewContainer {
+        width: 70%;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1150px) {
+    .aboutProgram {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 10%;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    }
+
+
+    .aboutProgramContainer {
+        width: 80%;
+    }
+
+    .programOverviewContainer {
+        width: 50%;
+        margin:auto;
+    }
 
 }

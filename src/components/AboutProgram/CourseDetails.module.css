@@ -43,13 +43,22 @@
 
 }
 
-.requirements {
+.requirementsContainer {
     display: flex;
     justify-content: space-between;
     padding: 0 10%;
     margin-top: 100px;
     margin-bottom: 80px;
 }
+
+.requirements {
+    width: 60%;
+    }
+
+    .programOverviewContainer {
+        width: 30%;
+        text-align: center;
+    }
 
 .courseTitle {
     color: #4b2e83;
@@ -80,4 +89,71 @@
     line-height: 1.1;
     cursor: pointer;
     color: #4b2e83;
+}
+
+@media only screen and (max-width: 500px) {
+    .requirementsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+    
+
+    .requirements {
+        width: 90%;
+    }
+
+    .programOverviewContainer {
+        width: fit-content;
+        text-align: center;
+    }
+
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+    .requirementsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 10%;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    }
+
+
+    .requirements {
+        width: 90%;
+    }
+
+    .programOverviewContainer {
+        width: 70%;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1150px) {
+    .requirementsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 10%;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    }
+
+
+    .requirements {
+        width: 80%;
+    }
+
+    .programOverviewContainer {
+        width: 50%;
+        margin:auto;
+    }
+
 }

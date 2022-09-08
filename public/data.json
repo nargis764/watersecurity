@@ -3,35 +3,39 @@
             "name": "Dr. Faisal Hossain",
             "title": "University of Washington",
             "bio": "Faisal Hossain is the John R Kiely Endowed Professor in Civil and Environmental Engineering at the University of Washington. He received his Ph.D. from The University of Connecticut in 2004, his M.S (1999) and B.S (1996) from The National University of Singapore and Indian Institute of Technology, Varanasi, respectively. The overarching research mission of Faisal Hossain is to make access to information on water a ‘fundamental right for all nations and all humans’ and apply earth science discoveries with engineering technology to reduce social inequity in availability of food, water and energy around the world. He is the recipient of awards such as NASA New Investigator Award (2008), US Fulbright Faculty Award (2012), American Geophysical Union (AGU) Charles Falkenberg Award (2012), ASCE Walter Huber Award (2015), and American Geophysical Union International Award (2020). He is a Fellow of the American Meteorological Society and ASCE EWRI.",
-            "image": "https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+            "image": "./images/Faisal_Hossain.jpg"
         },
 
-        {"id":2,
+        {
+            "id":2,
             "name": "Dr. Ali Shafqat Akanda",
             "title": "University of Rhode Island",
             "bio": "Ali S Akanda is an Associate Professor of Civil and Environmental Engineering at the University of Rhode Island. He is former member of the UW CEE Land Surface Hydrology research group and has obtained his Doctorate in Environmental and Water Resources Engineering from Tufts University, Medford, MA in 2011. He has been a faculty member at the University of Rhode Island since 2013, teaching Computer Aided Design, Civil Engineering and Water Resources. His primary research focus is on the intersections of Water Security, Climate Change, and Global Health. His current research includes waterborne disease modeling in South Asia, groundwater crisis in the Middle East, flood forecasting in major river basins of Asia and Africa, improving hydrologic modeling with neural network-based approaches in the US, and adapting water resources planning and design to evolving hydroclimatic extremes. He is an active member of the Hydrology and the Geohealth communities of the American Geophysical Union (AGU), and the UW Global Burden of Diseases (GBD) network as a water resources expert.",
-            "image": "https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+            "image": "./images/Ali_Akanda.jpg"
         },
 
-        {   "id":3,
+        {   
+            "id":3,
             "name": "Dr. Xiaodong Chen",
             "title": "Pacific Northwest National Laboratory",
             "bio": "Dr. Xiaodong Chen is a research scientist at Pacific Northwest National Laboratory under the US Department of Energy. He received his PhD in Civil and Environmental Engineering from the University of Washington in 2017. His research interests comprise multi-scale earth modeling systems, weather and climate modeling and big data analyses.",
-            "image": "https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+            "image": "./images/Xiaodong_Chen.jpg"
         },
 
-        {   "id":4,
+        {   
+            "id":4,
             "name": "Zach Schremmp",
             "title": "RH2, Bothell, USA",
             "bio": "Zach Schrempp is a civil engineering consultant licensed in Washington and Oregon. He is a UW CEE alumnus and has been part of the RH2 Engineering team since 2013, providing civil engineering and planning services to clients throughout the Pacific Northwest. His primary focus is on hydraulic modeling, comprehensive planning, and facility design, with experience in all phases of analysis, planning, design, and construction of drinking water, sanitary sewer, and stormwater projects. Throughout his career, he has provided water and sewer system modeling and planning services to over 30 public water and sewer systems throughout Washington and Oregon, including the development of numerous comprehensive Water System Plans. He frequently provides mentoring and training to junior engineering staff, and often provides technical presentations at regional engineering conferences on drinking water and sanitary sewer modeling, analysis, and design topics.",
             "image": "https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
         },
 
-        {   "id":5,
+        {   
+            "id":5,
             "name": "Dr. Hisham Eldardiry",
             "title": "Pacific Northwest National Laboratory",
             "bio": "Dr. Hisham Eldardiry is a postdoctoral research associate at the Pacific Northwest National Laboratory (PNNL). He earned his PhD degree in Civil and Environmental Engineering from the University of Washington, Seattle in 2021. The primary focus of his research is geared towards finding sustainable solutions to the challenges facing the energy and water security, with particular interest in transboundary river basins, where hydro-political tensions are more pronounced. Dr. Eldardiry has been actively involved in teaching at University of Washington (water resources management and capstone design projects), and University of Louisiana (fluid mechanics and Engineering hydrology).",
-            "image": "https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+            "image": "./images/Hisham_Eldardiry.jpg"
         }
 
     ]

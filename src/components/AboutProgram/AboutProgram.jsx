@@ -24,26 +24,20 @@ const AboutProgram = ({ courseData, setCourseData }) => {
             .catch((err) => console.log(err))
     }, [])
 
+
+
     return (
         <>
 
-            <div className={styles.modal}>
+            <div className={ styles.aboutProgram }>
 
-                <div style={{ width: "60%" }}>
+                <div className={ styles.aboutProgramContainer }>
                     <div>
-                        <h2 className={styles.aboutProgramTitle}>
+                        <h2 className={ styles.aboutProgramTitle }>
                             About this program
                         </h2>
-                        <div style={{
-                            content: '',
-                            width: "47%",
-                            height: "8px",
-                            overflow: "hidden",
-                            background: "url(https://www.pce.uw.edu/assets/images/svg/gold-bar.svg) no-repeat right top",
-                            backgroundSize: "766px 8px",
-                            marginTop: "-15px",
-                            marginBottom: "30px"
-                        }}></div>
+
+                        <div className={ styles.goldBar }></div>
 
                         <p style={{
                             fontFamily: "open_sansregular,sans-serif",
@@ -93,7 +87,7 @@ const AboutProgram = ({ courseData, setCourseData }) => {
                         </p>
 
 
-                        <button className={styles.openModalButton}
+                        <button className={styles.requirementsButton}
                             onClick={() => navigate("/requirements")}>
                             <span style={{ marginRight: "5px" }}>See Requirements</span>
                             <FontAwesomeIcon icon={faGreaterThan} />
@@ -149,11 +143,9 @@ const AboutProgram = ({ courseData, setCourseData }) => {
                 </div>
 
 
-                <div style={{
-                    width: "30%",
-                    textAlign: "center",
-
-                }}>
+                <div className={
+                    styles.programOverviewContainer
+                }>
                     <div style={{
                         backgroundColor: "#4b2e83",
                         color: "white",

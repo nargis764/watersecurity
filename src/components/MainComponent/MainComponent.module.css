@@ -1,3 +1,4 @@
+
 .heroImg {
     /* background-image: url("https://pce.azureedge.net/getmedia/e363958f-feea-4f8a-a343-a76e8ebdec4e/earthquake-eng-cert-hero-2000x600-2.jpg");  */
     background-image: url("/images/whitesands.jpg");
@@ -6,6 +7,15 @@
     background-position: center center;
     background-repeat: no-repeat;
     padding: 50px 10%;
+}
+
+.mainContainer {
+    display:flex;
+    justify-content:space-between;
+}
+
+.titleContainer {
+    width:60%;
 }
 
 .heroTitle {
@@ -61,4 +71,37 @@
     padding: 5px 0;
     color: #444;
     text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .mainContainer {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.detailsContainer {
+    background-color: #f0ede3;
+    width: fit-content;
+
+}
+
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1100px) {
+    .mainContainer {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.detailsContainer {
+    background-color: #f0ede3;
+    width: 70%;
+
+}
+
+
 }
