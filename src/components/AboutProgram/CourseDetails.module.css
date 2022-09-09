@@ -2,7 +2,22 @@
     text-transform: uppercase;
     color: #4b2e83;
     font-family: encode_sans_compressedblack, sans-serif;
-    font-size: 40px;    
+    font-size: 40px;
+    animation-name: courseTitle;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes courseTitle {
+    0% {
+        opacity: 0;
+        transform: translate(-100px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
 
 .heroImg {
@@ -15,6 +30,44 @@
     padding: 50px 10%;
 }
 
+
+.courseHeadingContainer {
+    width: 60%;
+    margin: 50px auto 0;
+    padding: 10px 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.courseHeading {
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    transition-delay: 0.4s;
+    animation-name: headingAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 100ms;
+}
+
+@keyframes headingAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
 .courseContainer {
     background-color: #e8e8e8;
     color: white;
@@ -22,12 +75,27 @@
     top: -22px;
     padding: 20px 20px 50px;
     text-transform: uppercase;
+}
 
+.activeCourseContainer {
+    background-color: #585858;
+    color: white;
+    position: relative;
+    top: -22px;
+    padding: 20px 20px 50px;
+    text-transform: uppercase;
 }
 
 
 .courseNumber {
     color: #444;
+    font-family: open_sansbold, sans-serif;
+    font-size: 16px;
+    text-transform: "uppercase";
+}
+
+.activeCourseNumber {
+    color: white;
     font-family: open_sansbold, sans-serif;
     font-size: 16px;
     text-transform: "uppercase";
@@ -40,7 +108,15 @@
     width: 100%;
     position: relative;
     top: -20px;
+}
 
+.shapeDarkGray {
+    background: url("https://www.pce.uw.edu/assets/images/svg/dark-gray-chevron.svg") no-repeat center bottom;
+    display: "block";
+    height: 24px;
+    width: 100%;
+    position: relative;
+    top: -20px;
 }
 
 .requirementsContainer {
@@ -53,12 +129,31 @@
 
 .requirements {
     width: 60%;
-    }
+}
 
-    .programOverviewContainer {
-        width: 30%;
-        text-align: center;
-    }
+.goldBar {
+    content: '';
+    width: 30%;
+    height: 8px;
+    overflow: hidden;
+    background: url("https://www.pce.uw.edu/assets/images/svg/gold-bar.svg") no-repeat right top;
+    background-size: 766px 8px;
+    margin-top: -15px;
+    margin-bottom: 50px;
+}
+
+.courseDescription {
+    font-family: open_sansregular, sans-serif;
+    color: #222;
+    margin-bottom: 30px;
+    font-size: 17px;
+    line-height: 1.42857;
+}
+
+.programOverviewContainer {
+    width: 30%;
+    text-align: center;
+}
 
 .courseTitle {
     color: #4b2e83;
@@ -67,6 +162,12 @@
     font-weight: 700;
 }
 
+.activeCourseTitle {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
 
 .certificateTitle {
     text-decoration: none;
@@ -84,23 +185,25 @@
     text-decoration: none;
     font-family: open_sansbold, sans-serif;
     font-size: 14px;
-    font-weight:semibold;
-    margin-left:4px;
+    font-weight: semibold;
+    margin-left: 4px;
     line-height: 1.1;
     cursor: pointer;
     color: #4b2e83;
 }
 
+
+
 @media only screen and (max-width: 500px) {
     .requirementsContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0 10%;
-    margin-top: 100px;
-    margin-bottom: 80px;
-}
-    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 10%;
+        margin-top: 100px;
+        margin-bottom: 80px;
+    }
+
 
     .requirements {
         width: 90%;
@@ -153,7 +256,7 @@
 
     .programOverviewContainer {
         width: 50%;
-        margin:auto;
+        margin: auto;
     }
 
 }

@@ -30,30 +30,22 @@ const MainComponent = () => {
                         </div>
                         
 
-                        <ul style={{ listStyle: "none", paddingLeft: "0" }}>
-                            <li className={styles.listGroup}>
-                                <div style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    padding: "0 30px",
-                                }}>
-                                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                        <ul style = {{ listStyle: "none", paddingLeft: "0" }}>
+                            <li className = {styles.listGroup}>
+                                <div className = {styles.listItem}>
+                                    <div style = {{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                         <FontAwesomeIcon icon={faLocationDot} />
-                                        <p style={{ marginLeft: "10px" }}>Location:</p>
+                                        <p style = {{ marginLeft: "10px" }}>Location:</p>
                                     </div>
 
-                                    <p style={{ fontFamily: "encode_sans_compressedbold,sans-serif" }}>Online</p>
+                                    <p style = {{ fontFamily: "encode_sans_compressedbold,sans-serif" }}>Online</p>
                                 </div>
                             </li>
 
                             <li className={styles.listGroup}>
-                                <div style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    padding: "0 30px"
-                                }}>
+                                <div className = { styles.listItem }>
                                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                                        <FontAwesomeIcon icon={faCalendarDays} />
+                                        <FontAwesomeIcon icon = {faCalendarDays} />
 
                                         <p style={{ marginLeft: "10px" }}>Duration:</p>
                                     </div>
@@ -66,12 +58,8 @@ const MainComponent = () => {
                             </li>
 
                             <li className={styles.listGroup}>
-                                <div style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    padding: "0 30px"
-                                }}>
-                                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                                <div className = { styles.listItem }>
+                                    <div style = {{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                         <FontAwesomeIcon icon={faClock} />
 
                                         <p style={{ marginLeft: "10px" }}>Times:</p>
@@ -84,10 +72,10 @@ const MainComponent = () => {
                                 </div>
                             </li>
 
-                            <li className={styles.listGroup}>
-                                <div style={{ display: "flex", justifyContent: "space-between", padding: "0 30px" }}>
-                                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                                        <FontAwesomeIcon icon={faDollarSign} />
+                            <li className = { styles.listGroup }>
+                                <div className = { styles.listItem }>
+                                    <div style = {{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                                        <FontAwesomeIcon icon = {faDollarSign} />
 
                                         <p style={{ marginLeft: "14px" }}>Cost:</p>
                                     </div>

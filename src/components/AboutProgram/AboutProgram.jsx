@@ -1,11 +1,11 @@
 import React, { useEffect, useContext } from 'react';
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import styles from "./AboutProgram.module.css"
 import { ExternalLink } from 'react-external-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGreaterThan } from '@fortawesome/free-solid-svg-icons'
-import MyContext from "../../context/MyContext"
+import MyContext from "../../context/MyContext";
 
 
 
@@ -39,25 +39,13 @@ const AboutProgram = ({ courseData, setCourseData }) => {
 
                         <div className={ styles.goldBar }></div>
 
-                        <p style={{
-                            fontFamily: "open_sansregular,sans-serif",
-                            color: "#222",
-                            marginBottom: "16px",
-                            fontSize: "17px",
-                            lineHeight: "1.42857"
-                        }}>
+                        <p className = { styles.aboutProgramParagraph }>
                             Water, like many other natural resources, requires an up to date and broad-based understanding of
                             current and emerging challenges due to, but not limited to, climate change, infrastructure design and
                             safety, social justice, geo-politics and public health.
                         </p>
 
-                        <p style={{
-                            fontFamily: "open_sansregular,sans-serif",
-                            color: "#222",
-                            marginBottom: "16px",
-                            fontSize: "17px",
-                            lineHeight: "1.42857"
-                        }}>
+                        <p className = { styles.aboutProgramParagraph }>
                             This online certificate program in Water Security aims to improve literacy required to understand,
                             communicate and mitigate water security challenges that demand such broach-based attention.
                         </p>
@@ -73,13 +61,7 @@ const AboutProgram = ({ courseData, setCourseData }) => {
                             Designed for
                         </h3>
 
-                        <p style={{
-                            fontFamily: "open_sansregular,sans-serif",
-                            color: "#222",
-                            marginBottom: "16px",
-                            fontSize: "17px",
-                            lineHeight: "1.42857"
-                        }}>
+                        <p className = { styles.aboutProgramParagraph }>
                             Professionals with undergrad degrees in engineering, such as civil and environmental, mechanical,
                             chemical, aerospace engineering; and science fields such as geoscience, earth and environmental sciences,
                             atmospheric science, physics, and biology, liberal arts such as law, policy, economics, urban/landscape
@@ -96,7 +78,7 @@ const AboutProgram = ({ courseData, setCourseData }) => {
 
 
                     <div>
-                        <h3 style={{
+                        <h3 style = {{
                             fontFamily: "encode_sans_compressedblack,sans-serif",
                             textTransform: "uppercase",
                             color: "#444"
@@ -105,7 +87,7 @@ const AboutProgram = ({ courseData, setCourseData }) => {
                             What you'll learn
                         </h3>
 
-                        <ul style={{
+                        <ul style = {{
                             fontFamily: "open_sansregular,sans-serif",
                             color: "#222",
                             display: "flex",
@@ -178,7 +160,8 @@ const AboutProgram = ({ courseData, setCourseData }) => {
                                     </Link> */}
                                     <Link to={info.link} className={styles.courseTitle}>
                                         {info.title}
-                                    </Link>
+                                    </Link>                                    
+                                    
                                 </div>
                             </div>
                         )
@@ -190,19 +173,10 @@ const AboutProgram = ({ courseData, setCourseData }) => {
 
                     <div style={{ marginTop: "-30px" }}>
 
-                        <div className={styles.shapeGray}>
+                        <div className={ styles.shapeGray }>
                         </div>
 
-                        <div style={{
-                            backgroundColor: "#d9d9d9",
-                            position: "relative",
-                            top: "-22px",
-                            padding: "30px 20px 54px",
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "space-between",
-                            gap: "15px"
-                        }}>
+                        <div className = { styles.certificateContainer }>
 
                             <div>
                                 <img src="https://cdn.onlinewebfonts.com/svg/img_454076.png" alt="certificate" width="62" height="54" />

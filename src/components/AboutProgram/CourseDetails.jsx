@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import styles from "./CourseDetails.module.css";
 import MyContext from '../../context/MyContext';
 import { ExternalLink } from 'react-external-link';
@@ -8,94 +8,53 @@ import { ExternalLink } from 'react-external-link';
 const CourseDetails = ({ courseData }) => {
 
     const { id } = useParams();
+    const location = useLocation();
     const context = useContext(MyContext);
     const [courseDetails, setCourseDetails] = useState({});
 
+    const { pathname } = location;
 
     useEffect(() => {
+        window.scrollTo({ top: 0 });
         let data = context.courseData.find(course => course.id == id);
-        console.log(courseData)
+        console.log(context.courseData)
         console.log(id)
         console.log(data)
+        console.log(pathname)
         setCourseDetails(data);
     }, [id])
 
+    
     return (
         <>
-        <div className={styles.heroImg}>
-            <Link to="/" style={{ textAlign:"center", fontSize:"20px", color: "#4b2e83" }}>Go Back</Link>
-            <div 
-            style={{  
-                width:"60%", 
-                margin:"50px auto 0", 
-                padding:"10px 50px",
-                borderRadius:"5px",
-                display:"flex", 
-                justifyContent:"center", 
-                alignItems:"center", 
-                // background:"rgb(75, 46, 131,0.6)" }}>
-                // background:"rgb(255, 255, 255)" }}
-            }}
+            <div className = {styles.heroImg}>
+                <Link to="/" style = {{ textAlign: "center", fontSize: "20px", color: "#4b2e83" }}>Go Back</Link>
+                <div
+                    className = {styles.courseHeadingContainer}
                 >
-                        <h1 style={{
-                            color: "white",
-                            textTransform: "uppercase",
-                            fontSize: "50px",
-                            wordWrap: "break-word",
-                            textAlign:"center",
-                            // lineHeight: "500px",
-                            textShadow: "0 0 5px rgba(0,0,0,.4)",
-                            transitionDelay: "0.4s"
-                        }}>
-                            {courseDetails?.title}
-                        </h1>
-                    </div>
-        </div>
-
-        {/* <div style={{padding:"10px 10%"}}> */}
-        <div className = { styles.requirementsContainer }>
-            <div className = { styles.requirements }>
-
-            <h2 className={styles.aboutCourseTitle}>
-                            About this Course
-                        </h2>
-                        <div style={{
-                            content: '',
-                            width: "30%",
-                            height: "8px",
-                            overflow: "hidden",
-                            background: "url(https://www.pce.uw.edu/assets/images/svg/gold-bar.svg) no-repeat right top",
-                            backgroundSize: "766px 8px",
-                            marginTop: "-15px",
-                            marginBottom: "50px"
-                        }}></div>
-
-            {/* <h3 style={{ textTransform:"uppercase", letterSpacing: "1px", fontSize: "22px", color: "#444", fontFamily: "encode_sans_compressedblack,sans-serif" }}>
-                Course Title:
-            </h3>
-            <p style={{ fontFamily: "open_sansregular,sans-serif",
-                            color: "#222",
-                            marginBottom: "30px",
-                            fontSize: "17px",
-                            lineHeight: "1.42857" }}>
-                {courseDetails?.title}
-            </p>
-
-            <h3 style={{ textTransform:"uppercase", letterSpacing: "1px", fontSize: "22px", color: "#444", fontFamily: "encode_sans_compressedblack,sans-serif" }}>
-                Description of Course:
-            </h3> */}
-            <p style={{ 
-                fontFamily: "open_sansregular,sans-serif",
-                            color: "#222",
-                            marginBottom: "30px",
-                            fontSize: "17px",
-                            lineHeight: "1.42857" }}>
-                {courseDetails?.description}
-            </p>
+                    <h1 className = {styles.courseHeading}>
+                        {courseDetails?.title}
+                    </h1>
+                </div>
             </div>
 
+            {/* <div style={{padding:"10px 10%"}}> */}
+            <div className = { styles.requirementsContainer }>
+                <div className = { styles.requirements }>
 
-            <div className = {styles.programOverviewContainer}>
+                    <h2 className = { styles.aboutCourseTitle }>
+                        About this Course
+                    </h2>
+                    <div className = { styles.goldBar }></div>
+
+                    
+                    <p className = { styles.courseDescription }>
+                        {courseDetails?.description}
+                    </p>
+                </div>
+
+
+                <div className={styles.programOverviewContainer}>
                     <div style={{
                         backgroundColor: "#4b2e83",
                         color: "white",
@@ -117,17 +76,15 @@ const CourseDetails = ({ courseData }) => {
 
                             <div style={{ marginTop: "-30px" }} key={info.id}>
 
-                                <div className={styles.shapeLightGray}>
+                                <div className={ pathname === `/course/${info.id}`? styles.shapeDarkGray : styles.shapeLightGray }>
                                 </div>
-                                <div className={styles.courseContainer}>
-                                    <h3 className={styles.courseNumber}>
-                                        {info.number}
+                                <div className={ pathname === `/course/${info.id}`? styles.activeCourseContainer : styles.courseContainer }>
+                                    <h3 className={ pathname === `/course/${info.id}`? styles.activeCourseNumber : styles.courseNumber }>
+                                        { info.number }
                                     </h3>
-                                    {/* <Link to={`/course/${info.id}`} className={styles.courseTitle}>
-                                        {info.title}
-                                    </Link> */}
-                                    <Link to={info.link} className={styles.courseTitle}>
-                                        {info.title}
+                                    
+                                    <Link to={ info.link } className={ pathname === `/course/${info.id}`? styles.activeCourseTitle : styles.courseTitle }>
+                                        { info.title }
                                     </Link>
                                 </div>
                             </div>
@@ -184,23 +141,7 @@ const CourseDetails = ({ courseData }) => {
                 </div>
 
 
-            
-
-
-            {/* <h3 style={{ textTransform:"uppercase", letterSpacing: "1px", fontSize: "22px", color: "#444", fontFamily: "encode_sans_compressedblack,sans-serif" }}>
-                Instructor Bio:
-            </h3>
-            <p style={{ fontFamily: "open_sansregular,sans-serif",
-                            color: "#222",
-                            marginBottom: "30px",
-                            fontSize: "17px",
-                            lineHeight: "1.42857" }}>
-                {courseDetails?.instructor} 
-            </p> */}
-
-            
-
-        </div>
+            </div>
         </>
     )
 }

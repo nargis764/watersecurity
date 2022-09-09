@@ -29,6 +29,14 @@
     margin-bottom: 30px;
 }
 
+.aboutProgramParagraph {    
+    font-family: open_sansregular,sans-serif;
+    color: #222;
+    margin-bottom: 16px;
+    font-size: 17px;
+    line-height: 1.42857;                        
+}
+
 .requirementsButton {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
     border-radius: 5px;
@@ -118,7 +126,18 @@
     width: 100%;
     position: relative;
     top: -20px;
+}
 
+
+.certificateContainer {    
+    background-color: #d9d9d9;
+    position: relative;
+    top: -22px;
+    padding: 30px 20px 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;                        
 }
 
 .shapeWhite {
@@ -129,6 +148,10 @@
     width: 100%;
     position: relative;
 }
+
+.activeLink {
+    color: red;
+ }
 
 
 @media only screen and (max-width: 500px) {
